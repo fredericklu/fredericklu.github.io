@@ -1,79 +1,90 @@
---- 
-layout: default 
---- 
-<!-- Blog Post -->
-<!-- Title -->
-<div class="row">
-  <div class="post-area post">
+---
+layout: default
+---
 
- 	<div class="post-list-body">
-        	<div class="all-posts" post-cate="All">
- 		<header>
-		<h1>
-		  {{ page.title }}
-		  <div class="post-date"><a href="https://github.com/{{ site.github }}/{{ site.github }}.github.io/edit/master/{{ page.path }}" target="_blank">纠错</a>&nbsp;&nbsp;
-			<span class="glyphicon glyphicon-time"></span>
-			{{ page.date | date_to_string }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-		  </div>
-		</h1>
- 		</header>
-		<!-- Author -->
-		<hr>
-		 <article>
-		{{ content }}
-		  </article>
-		<hr>
-	<br/>
-        <p>
-          本作品由 <a href="mailto:{{ site.email }}">{{ site.author }}</a> 创作，采用
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
-          进行许可。
-        </p>
-	<div style="margin-top:10px;margin-bottom:10px">
-	  {%if page.previous%}
-	  <span class="next">
-	    上篇：
-	    <a href="{{page.previous.url}}">
-	      {{page.previous.title}}
-	    </a>
-	  </span>
-	  {%endif%} 
-	  {%if page.next%}
-	  <span class="prev">
-	    下篇：
-	    <a href="{{page.next.url}}">
-	      {{page.next.title}}
-	    </a>
-	  </span>
-	  {%endif%}
-	</div>
-	</div>
-	
-        {% for category in site.categories %}
-	<div post-cate="{{category | first}}">
-          <ul class="posts">
-            {% for posts in category  %}
-              {% for post in posts %}
-                {% if post.url %}
-		<li>
-                  <a href="{{ post.url }}" class="post-list-item">
-                    <h2>{{ post.title }}</h2>
-                    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                  </a>
-		</li>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </ul>
-	</div>
-        {% endfor %}
-	 </div>
+<article>
+  <section class="title">
+    <h2>{{ page.title }} </h2>
+  </section>
+  <section class="meta">
+  <span class="time">
+    <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+  </span>
+  {% if page.tags %}
+  <span class="tags">
+    {% for tag in page.tags %}
+    <a href="/tags.html#{{ tag }}" title="{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+  </span>
+  <!-- BEGIN this would not work on any other domain -->
+  <span
+    class           = "like-wrapper"
+    like-shortname  = '{{ site.disqus }}'
+    like-identifier = '{{ page.guid }}'
+    like-name       = '{{ page.title }}'
+    like-btn        = '&#xf087;'
+    like-link       = '{{ site.atom-baseurl }}{{ page.url }}'
+    ></span>
+  <script type="text/javascript">
+    var l = document.createElement('script');
+    l.type = 'text/javascript'; l.async = true; l.src = 'http://www.like-btn.com/javascript/widget.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(l);
+  </script>
+  <!-- END this would not work on any other domain -->
+  {% endif %}
+  </section>
+  <section class="post">
+  {{ content }}
+  </section>
+  {% if page.guid %}
+  <div class="divider">
+    <span>
+    {% if page.previous %}
+    <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i></a>
+    {% else %}
+    <i class="fa fa-circle"></i>
+    {% endif %}
+    </span>
+    <!-- BEGIN comment icon
+    <span><a href="javascript:leave_comment();" id="leave_comment_link"><i class="fa fa-comment-o"></i></a></span>
+    <span><a href="javascript:collapse_comment();" id="collapse_comment_link" style="display:none;"><i class="fa fa-chevron-up"></i></a></span>
+      END comment icon -->
 
-</div>
+    <span>
+    {% if page.next %}
+    <a href="{{ page.next.url }}"><i class="fa fa-chevron-right"></i></a>
+    {% else %}
+    <i class="fa fa-circle"></i>
+    {% endif %}
+    </span>
+  </div>
 
+  <!-- BEGIN comment
+  <section class="comment">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '{{ site.disqus }}';
+      var disqus_identifier = '{{ page.guid }}';
 
-<!-- Blog Comments -->
-<div class="media">
-  {% include comment.html %} 
-</div> 
-</div>
+      function leave_comment() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          $("#leave_comment_link").css("display", "none");
+          $("#collapse_comment_link").css("display", "");
+      };
+      function collapse_comment() {
+          // document.getElementById("disqus_thread").innerHTML = '';
+          $("#disqus_thread").slideUp(400, function() {
+              $("#disqus_thread").empty();
+              $("#leave_comment_link").css("display", "");
+              $("#collapse_comment_link").css("display", "none");
+              $("#disqus_thread").css("display", "");
+          });
+      };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </section>
+  END comment -->
+  {% endif %}
+</article>
