@@ -1,22 +1,18 @@
 ---
-title: about
+title: About Me
 layout: page
 ---
 
-a
+Fred Lu
 
-> Minimalist | Appleist | Unixer | Coder
-
-who involved in 
-
-> [github](https://github.com/waynezhang)
+> Traverller | Thinker | Reader | Coder
 
 mail 
 
-> echo srvpqxfbyqfvpdtkbjwt | tr yxwvtsrqpkjfdb zuonmlihgeca@.
+> fredlu@yeah.net
 
 or follow 
 
-> [@o_lll](https://twitter.com/#!/o_lll)
+> [@dutch_flu](https://www.instagram.com/dutch_flu/)
 
 to reach me
