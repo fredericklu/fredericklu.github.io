@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Sample Post
-excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-categories: [hello world]
+title: First Post
+excerpt: "My first post"
+categories: [Travel]
 comments: true
 image:
-  feature: https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-  credit: thomas shellberg
-  creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
+  feature: https://images.unsplash.com/photo-1478879410917-bf2a4cacaad1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=329a7eeef4437512f47d70a983ca46b4
+  credit: Fred Lu
+  creditlink: https://unsplash.com/@fredlu?photo=sNjHYw6paUE
+
+
 ---
 
 ## HTML Elements
@@ -60,9 +62,9 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 ## Tables
 
 | Header 1 | Header 2 | Header 3 |
-|:--------|:-------:|--------:|
-| cell 1   | cell 2   | cell 3   |
-| cell 4   | cell 5   | cell 6   |
+| :------- | :------: | -------: |
+| cell 1   |  cell 2  |   cell 3 |
+| cell 4   |  cell 5  |   cell 6 |
 |----
 | cell 1   | cell 2   | cell 3   |
 | cell 4   | cell 5   | cell 6   |
