@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hello, I am Fred LU. I'm now a master student majoring in Data Science & Technology studying at TU Delft.
+Hello, I am Fred LU. I'm now a master student majoring in Data Science & Technology at TU Delft.
 
 ## Education
 
