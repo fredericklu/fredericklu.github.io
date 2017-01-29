@@ -1,6 +1,8 @@
 {% if page.author %} {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %} {% endif %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=17754997&auto=1&height=32"></iframe>
-</br>
+<p>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=17754997&auto=1&height=32"></iframe>
+</p>
+
 <div class="cover-card table-cell table-middle">
   {% if author.avatar %}
   <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
