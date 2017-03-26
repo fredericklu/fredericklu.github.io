@@ -64,15 +64,15 @@ about me <br />
 
     </header>
 
-    <!-- {% if post.excerpt %}
+    {% if post.excerpt %}
     <div class="post-description">
       <p>
         {{ post.excerpt }}
       </p>
     </div>
-    {% endif %} -->
+    {% endif %}
 
-  <!--   {% if post.image.feature and not post.excerpt%}
+    {% if post.image.feature and not post.excerpt%}
     <div class="post-image-feature">
       <img src=
       {% if post.image.feature contains 'http' %}
@@ -86,7 +86,7 @@ about me <br />
       <span class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></span>
       {% endif %}
     </div>
-    {% endif %} -->
+    {% endif %}
 
 </section>
 {% endfor %}
