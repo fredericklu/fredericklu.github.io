@@ -72,7 +72,7 @@ about me <br />
     </div>
     {% endif %}
 
-    {% if post.image.feature %}
+    {% if post.image.feature and not post.excerpt%}
     <div class="post-image-feature">
       <img src=
       {% if post.image.feature contains 'http' %}
