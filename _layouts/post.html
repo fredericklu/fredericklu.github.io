@@ -5,13 +5,13 @@ layout: default
 <a class="btn" href= "{{ site.url }}/" >
   Home
 </a>
-{% if page.image.feature %}
+{% if page.image.pic %}
 <div class="post-image-feature">
   <img class="feature-image" src=
-  {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
-  "{{ page.image.feature }}"
+  {% if page.image.pic contains 'https' or page.image.pic contains 'http' %}
+  "{{ page.image.pic }}"
   {% else %}
-  "{{ site.url }}/img/{{ page.image.feature }}"
+  "{{ site.url }}/img/{{ page.image.pic }}"
   {% endif %}
   alt="{{ page.title }} feature image">
   {% if page.image.credit %}
