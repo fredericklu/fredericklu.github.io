@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Post
+title: Testing Post
 excerpt: "Testing Post"
 categories: [Test]
 tags: [test]
