@@ -23,14 +23,14 @@ about me <br />
 
 </section>
 
-<section>
+<!-- <section>
 <div align="center">
 ☟☟☟ 近期关注 ☟☟☟ <br /> 
 ☟☟☟  <br /> 
 ☟ <br /> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bWuJnqDNrQs" frameborder="0" allowfullscreen></iframe>
 </div>
-</section>
+</section> -->
 
 {% for post in site.posts %}
 <section class="post">
@@ -64,15 +64,13 @@ about me <br />
 
     </header>
 
-   <!--  {% if post.excerpt %}
+    {% if post.excerpt %}
     <div class="post-description">
       <p>
         {{ post.excerpt }}
       </p>
     </div>
-    {% endif %} -->
-
-    {% if post.image.feature%}
+    {% else %}
     <div class="post-image-feature">
       <img src=
       {% if post.image.feature contains 'http' %}
@@ -87,6 +85,22 @@ about me <br />
       {% endif %}
     </div>
     {% endif %}
+
+  <!--   {% if post.image.feature%}
+    <div class="post-image-feature">
+      <img src=
+      {% if post.image.feature contains 'http' %}
+      "{{ post.image.feature }}"
+      {% else %}
+      "{{ site.url }}/img/{{ post.image.feature }}"
+      {% endif %}
+      alt="{{ post.title }} feature image">
+
+      {% if post.image.credit %}
+      <span class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></span>
+      {% endif %}
+    </div>
+    {% endif %} -->
 
 </section>
 {% endfor %}
