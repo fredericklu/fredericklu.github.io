@@ -6,7 +6,7 @@ categories: [Test]
 tags: [test]
 comments: true
 image:
-  feature: https://images.unsplash.com/photo-1478879410917-bf2a4cacaad1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=329a7eeef4437512f47d70a983ca46b4
+  pic: https://images.unsplash.com/photo-1478879410917-bf2a4cacaad1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=329a7eeef4437512f47d70a983ca46b4
   credit: Fred Lu
   creditlink: https://unsplash.com/@fredlu?photo=sNjHYw6paUE
 
