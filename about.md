@@ -13,9 +13,9 @@ Fred LU, majoring in Data Science & Technology at TU Delft.
 
 ## Skills
 
-* **Programming Language** - `C` / `C++` / `Python` / `Java`
+* **Programming Language** - `Python` / `Java`/`C` / `C++` 
 * **Speaking Language** - `Chinese` / `English` / `Wu Dialect` 
-* **Sports** - `Football` / `Basketball` / `Badminton` / `Judo`
+* **Sports** - `Judo` / `Football` / `Basketball` / `Badminton` 
 
 ## Contact me
 

@@ -3,10 +3,11 @@
 # Site wide configuration
 ####################################
 #
+name: fredlu's blog
 title: Fred Lu
-email:
+email: fredlu@yeah.net
 description: Reading, Thinking & Travelling
-url: # the base hostname & protocol for your site
+url: fredericklu.github.io
 
 
 #
@@ -35,7 +36,7 @@ kramdown:
 owner:
   name: Fred LU
   avatar: magie.jpg
-  job: "Master, CS, TU Delft"
+  job: "Master, Data Science, TU Delft"
   bio: "Reading, Travelling & Thinking"
   email:
   disqus-shortname: fredlu
@@ -43,7 +44,7 @@ owner:
   facebook: dutchflu
   google:
     plus: #username
-    analytics:
+    analytics: UA-96115765-1
     verify:
     ad-client:
     ad-slot:
