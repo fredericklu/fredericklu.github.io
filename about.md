@@ -8,7 +8,7 @@ Fred LU, majoring in Data Science & Technology at TU Delft.
 
 ## Education
 
-* Master's degree of Computer Science(DST) from TU Delft(under way).
+* Master's degree of Computer Science (DST) from TU Delft (under way).
 * Bachelor's degree of Computer Science from Lanzhou University.
 
 ## Skills
