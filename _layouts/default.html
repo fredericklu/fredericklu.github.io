@@ -2,26 +2,22 @@
 <html lang="en">
 
 {% include head.html %}
-{% if jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
-<body>
-  <div class="row">
-    <div class="col s12 m3">
-      
-      <div class="table cover">
-        {% include sidebar.html %}
-      </div>
-      
-    
-    </div>
-    <div class="col s12 m9">
-      <div class="post-listing">
-        {{ content }}
-        {% include footer.html %}
-      </div>
-    </div>
-  </div>
-  {% include js.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+    {% include search.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 </body>
+
 </html>
